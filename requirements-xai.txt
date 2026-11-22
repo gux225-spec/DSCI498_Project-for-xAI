@@ -1,0 +1,4 @@
+# Also needed for the reference-paper protocol in step2_xai.py.
+-r requirements.txt
+shap==0.51.0
+lime==0.2.0.1

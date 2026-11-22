@@ -1,0 +1,164 @@
+{
+  "tag": "PRNet_lam0.3_s2028_b16",
+  "model": "PRNet",
+  "lam": 0.3,
+  "k": null,
+  "seed": 2028,
+  "training": {
+    "epochs_run": 1097,
+    "best_val_loss": 3.456214108155109e-05,
+    "seconds": 259.1
+  },
+  "validation": {
+    "all": {
+      "n_designs": 216,
+      "S21_full_MAE_dB": 0.059966083357693614,
+      "S21_passband_MAE_dB": 0.04012417125102167,
+      "S11_full_MAE_dB": 0.07358514919255313,
+      "S11_MAE_true_ge_m30dB": 0.04334823777448287,
+      "edge_MAE_MHz": 1.94022648567981,
+      "edge_P95_MHz": 5.791363389268334,
+      "n_edges": 396,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.08133100061399559,
+        "passband": 0.04012417125102167,
+        "high_stopband": 0.057502686551943724,
+        "transition": 0.04848519525067149
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.016577953632404625,
+        "passband": 0.25330074207734665,
+        "high_stopband": 0.01928255404840688,
+        "transition": 0.10896558649514221
+      },
+      "complex_RMSE": 0.005113651313894145,
+      "power_balance_max_abs": 0.1527571678161621,
+      "power_balance_mean_abs": 0.005384098272770643,
+      "passes_gate": {
+        "S21_full_MAE_dB": true,
+        "S21_passband_MAE_dB": true,
+        "S11_full_MAE_dB": true,
+        "S11_MAE_true_ge_m30dB": true,
+        "edge_MAE_MHz": true,
+        "edge_P95_MHz": true
+      },
+      "composite_score": 0.13129365503636342
+    },
+    "legacy_4d": {
+      "n_designs": 72,
+      "S21_full_MAE_dB": 0.054027142494941616,
+      "S21_passband_MAE_dB": 0.03605895847638612,
+      "S11_full_MAE_dB": 0.06201527037438947,
+      "S11_MAE_true_ge_m30dB": 0.037890681232267895,
+      "edge_MAE_MHz": 1.7147262377406185,
+      "edge_P95_MHz": 5.622486387114554,
+      "n_edges": 128,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.07553072808725143,
+        "passband": 0.03605895847638612,
+        "high_stopband": 0.048445888777605646,
+        "transition": 0.044998540191984245
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.014471981357427794,
+        "passband": 0.21707308076746246,
+        "high_stopband": 0.017164432358328856,
+        "transition": 0.08836751310311175
+      },
+      "complex_RMSE": 0.004687347703558879,
+      "power_balance_max_abs": 0.13188648223876953,
+      "power_balance_mean_abs": 0.004851534031331539
+    },
+    "new_6d": {
+      "n_designs": 144,
+      "S21_full_MAE_dB": 0.06293555378906962,
+      "S21_passband_MAE_dB": 0.04215677763833944,
+      "S11_full_MAE_dB": 0.07937008860163496,
+      "S11_MAE_true_ge_m30dB": 0.0460805274937294,
+      "edge_MAE_MHz": 2.0479280966358417,
+      "edge_P95_MHz": 6.208622515621877,
+      "n_edges": 268,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.08423113687736765,
+        "passband": 0.04215677763833944,
+        "high_stopband": 0.06203108543911277,
+        "transition": 0.0502285227800151
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.01763093976989304,
+        "passband": 0.27141457273228875,
+        "high_stopband": 0.020341614893445888,
+        "transition": 0.11926462319115744
+      },
+      "complex_RMSE": 0.005313993826973045,
+      "power_balance_max_abs": 0.1527571678161621,
+      "power_balance_mean_abs": 0.005650379694998264
+    },
+    "single_band": {
+      "n_designs": 198,
+      "S21_full_MAE_dB": 0.052642676075819406,
+      "S21_passband_MAE_dB": 0.035107425202631014,
+      "S11_full_MAE_dB": 0.07398227567561909,
+      "S11_MAE_true_ge_m30dB": 0.04210686695310222,
+      "edge_MAE_MHz": 1.94022648567981,
+      "edge_P95_MHz": 5.791363389268334,
+      "n_edges": 396,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.06944527977297718,
+        "passband": 0.035107425202631014,
+        "high_stopband": 0.05256070832661006,
+        "transition": 0.04247761414005737
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.015581524657313994,
+        "passband": 0.26779229017881456,
+        "high_stopband": 0.01831683690142301,
+        "transition": 0.10529473882551706
+      },
+      "complex_RMSE": 0.0044049960122285615,
+      "power_balance_max_abs": 0.09388148784637451,
+      "power_balance_mean_abs": 0.004863348789513111
+    },
+    "multiband": {
+      "n_designs": 18,
+      "S21_full_MAE_dB": 0.1405235634583099,
+      "S21_passband_MAE_dB": 0.09530837778331888,
+      "S11_full_MAE_dB": 0.0692167578788274,
+      "S11_MAE_true_ge_m30dB": 0.05688694549636065,
+      "edge_MAE_MHz": NaN,
+      "edge_P95_MHz": NaN,
+      "n_edges": 0,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.21207392986519807,
+        "passband": 0.09530837778331888,
+        "high_stopband": 0.111864447030614,
+        "transition": 0.11456858746742682
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.027538672358401566,
+        "passband": 0.09389371296119857,
+        "high_stopband": 0.029905442665229418,
+        "transition": 0.1493449108610189
+      },
+      "complex_RMSE": 0.010017448206796531,
+      "power_balance_max_abs": 0.1527571678161621,
+      "power_balance_mean_abs": 0.011112339794635773
+    }
+  },
+  "concepts_vs_vf": {
+    "natural_frequency_MAE_MHz": [
+      210.80882100635634,
+      1.5450930246724488,
+      5.742083208637062,
+      1.668424746684247,
+      172.20243397281064
+    ],
+    "Q_median_rel_error": [
+      0.01387206039731298,
+      0.0051787627237910305,
+      0.014217086103662013,
+      0.007029213369718956,
+      0.03951960741782662
+    ]
+  }
+}

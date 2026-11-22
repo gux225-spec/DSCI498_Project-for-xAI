@@ -1,0 +1,51 @@
+{
+  "frozen_utc": "2026-10-25T17:21:06.622851+00:00",
+  "statement": "No test label was read before this record. Every file below is frozen for step 3.",
+  "sha256": {
+    "results/step1/final_models.json": "b25fcc2b19d85ec4830142e307814d8369749db9416eaed715ff045d4c042d9b",
+    "results/step2/setup.json": "4b18cddbeb8bc3f387d4e73227af27aa6a94805356562a86cd1162d33c217437",
+    "results/step2/setup.npz": "0fe39f01e12baa17b68d8e2c7421c41b6a99065a575ec53ce0d84cf37c723e0e",
+    "ads/baseline.ckt": "f61c3c7d0dbca0764be613fceaf89a3b58dc6e6c3e6d75d0ae4b0cf417634a35",
+    "docs/algorithm_plan_v2.md": "473e1c831a3b99517b1d1b88ddd0ea8298b8f28d896790b8a651b235d00db765",
+    "docs/training_xai_protocol_v2.json": "0daccf7ca0419eff4183019c81c31b5547196be5d078cfc3ec7bfedbce3acbbe",
+    "src/filterxai/__init__.py": "b3c6ebdff431a213cd949b98e4f1b493fbd623eb6d44e2f1fabb4777bba03755",
+    "src/filterxai/data.py": "90b9d7c5a8f38555f9544d4a18106f7e299214f5e4ebfa876f3b1dc9f9c91805",
+    "src/filterxai/metrics.py": "9ccc6c8a080a1b370e4f1a55631bf69ffdf6ef6776f569c0581a129ff9372eb8",
+    "src/filterxai/models.py": "479e3a8e05c9ba37332298f347b8180ef86916211cd8844a036785c79afa5961",
+    "src/filterxai/targets.py": "f17610b7ad27f6252ceef516358071610a2589ca93bec69e562c1243984fe33b",
+    "src/filterxai/train.py": "9790dfe1c7166fb9826f29bfb41a1923bc8f613d8df47c6a9169c317f462c218",
+    "src/filterxai/vectfit.py": "d10a17915ba5171782e15f2368105f6a915fd7433e3f8acc46564d79be75a04f",
+    "src/filterxai/xai.py": "72afe6e191be5cf0002a3897d9fc42988bbb404339d5071bc6a68626a97be25d",
+    "src/filterxai/zoo.py": "72667f64653be39c5ae7c8dc1d9ea22a3c2093a2ddf3f27222ffccddcebe45e0",
+    "scripts/step1_train.py": "7d47305cdc0b1f7836e53c272e8cbe601ba4ebb968a4b640e4e7335461ab6055",
+    "scripts/step1_b1_gpr.py": "b00744af8601fd668660a863e3ccc5935f485a6edc71caccd0a7e949b3a221e1",
+    "scripts/step2_setup.py": "8b52bc8631940e6a50e5b316c907518d3ea9094a77bd224deebfcd5dde673355",
+    "scripts/step2_xai.py": "fa15e0629ef70e38b5911588e9cb0260914dd8d916f57fa6b28a3dfb170a2541",
+    "scripts/step2_eval.py": "d29ef7d82571c95a066fc05419020c0773c55644f0c9ac7cfaae31de24a7d72d",
+    "scripts/ads_sim.py": "8798c64a6bed54ac24182ed72b0f1287d10184147670427fe56a89d606b40f47",
+    "results/step1/runs/PRNet_lam0.3_s2026_b16_lossless10.0/model.pt": "d5ed539634196f399a9b662f275e30b04225e9108d511bb562fd5d5336f0a3d8",
+    "results/step1/runs/PRNet_lam0.3_s2027_b16_lossless10.0/model.pt": "4766e0c8d616209e7622c42c821aae1c40654ad52efc3d8c74deae3760a369ee",
+    "results/step1/runs/PRNet_lam0.3_s2028_b16_lossless10.0/model.pt": "003533064d7048446c7d94a54cff504ed4f1ac71a89ba4c3e04ca3eb425f78bd",
+    "results/step1/runs/M1_k4_lam0.1_s2026/model.pt": "104fe31ddea24022a0d2087f2e321b57b21819ec6e703d14beb240f61bd10808",
+    "results/step1/runs/M1_k4_lam0.1_s2027/model.pt": "69036794793b6f2a06caff5d2a09a0e36eb690212f6fdd1a0e62e8e35da559ef",
+    "results/step1/runs/M1_k4_lam0.1_s2028/model.pt": "3a7587adc1f7ed2b2e4502d4c02fb1257959234d1693e5380389e754e7e4748e",
+    "results/step1/runs/M0_s2026/model.pt": "5e782fb159084cdd38b01f6916b26c7a6cf30439ec5b95808ec3a4c5274668f3",
+    "results/step1/runs/M0_s2027/model.pt": "976c54a1439a8e8e914074086f3fe941c86168c65447aac44693d213b6da993f",
+    "results/step1/runs/M0_s2028/model.pt": "dba8f2c12cb4bcd56124ccd1f3d911d037fa8629805518106e06dfa32135fb1f"
+  },
+  "step3_protocol": {
+    "test_accuracy": "PRNet, M1, M0 (3 seeds each) and B1 (rank 32, refit with the step-1 settings, validation predictions must reproduce) on all 216 test designs; same gate metrics and groups as step 1; compared with the validation results and Suslova et al. 2026",
+    "test_explained_designs": "40 single-band test designs by the step-2 rule: all single-band mask passes + failing designs by source (largest remainder), seed 2026",
+    "test_XAI": "identical to step 2 (scripts/step2_xai.py, same reference, backgrounds, LIME settings, seeds); no setting may change after reading test labels",
+    "ADS_true_shapley": "6 geometry features, single-reference interventional game (absent features at the ADS baseline geometry), 64 coalitions per design for the 40 validation + 40 test explained designs; empty and full coalitions taken from existing simulations; curve targets via filterxai.targets; T3 truth by vector fitting (N=10) of every coalition response",
+    "ADS_local_finite_difference": "per geometry parameter h = 2% of the declared span; central difference when x +- h are both in bounds, otherwise one-sided using the design itself; compared with model gradients",
+    "comparisons": {
+      "explanation_vs_network": "explainer (SHAP 9-feature geometry part, IG, LIME-delta) vs the surrogate's exact 6-feature game (controls at reference, read from the 512-coalition table)",
+      "network_vs_physics": "surrogate 6-feature game vs ADS 6-feature game",
+      "end_to_end": "explainer vs ADS game",
+      "metrics": "Spearman of |phi| over 6 geometry features, sign agreement on features with |phi_ADS| >= 1% of target train std, MAE of phi / target train std"
+    },
+    "paper_criterion_test": "per design and target: (a) paper protocol rho(GradientExplainer, median lime-package LIME) vs rho(GradientExplainer, ADS Shapley); (b) matched game rho(SHAP_ref, LIME-delta) vs rho(SHAP_ref, ADS Shapley); report Spearman across design-target pairs and mean truth agreement for designs above vs below the median SHAP-LIME rho",
+    "not_in_step3": "C counterfactual tuning (step 4)"
+  }
+}

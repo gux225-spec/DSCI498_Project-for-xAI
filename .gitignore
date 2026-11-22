@@ -1,0 +1,40 @@
+# Local environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.vscode/
+
+# Release archives and task output
+*.zip
+dist/
+work/
+outputs/
+
+# Large evidence is distributed in DSCI498_evidence.zip.
+# Text protocols, summaries, CSV metadata and manifests remain visible to Git.
+*.npz
+*.pt
+*.ds
+*.h5
+*.hdf5
+results/**/sim/
+results/**/work/
+
+# Native diagnostic outputs and third-party full-text working reference
+data/filter_supplement_v2/em_diagnostics/
+docs/reference/shap_lime_filter_paper.txt
+*.log
+*.err
+*_stdout.txt
+
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz

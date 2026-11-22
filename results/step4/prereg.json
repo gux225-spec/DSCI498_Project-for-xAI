@@ -1,0 +1,147 @@
+{
+  "written_utc": "2026-10-25T19:23:08.868157+00:00",
+  "statement": "Written before any tuning code was run; no setting below may change after test-case results are seen.",
+  "plan_sha256": "f9207f37f5a5e94c0c5d532930d57152caacd643aedaa01065fa00a72ba958a7",
+  "cases": {
+    "test": {
+      "pool_size": 196,
+      "index": [
+        5,
+        15,
+        20,
+        25,
+        34,
+        37,
+        59,
+        61,
+        68,
+        70,
+        87,
+        109,
+        119,
+        123,
+        127,
+        132,
+        134,
+        138,
+        142,
+        149,
+        152,
+        155,
+        159,
+        160,
+        170,
+        175,
+        189,
+        190,
+        198,
+        205
+      ],
+      "design_id": [
+        "test_0005",
+        "test_0015",
+        "test_0020",
+        "test_0025",
+        "test_0034",
+        "test_0037",
+        "test_0059",
+        "test_0061",
+        "test_0068",
+        "test_0070",
+        "v2_test_0015",
+        "v2_test_0037",
+        "v2_test_0047",
+        "v2_test_0051",
+        "v2_test_0055",
+        "v2_test_0060",
+        "v2_test_0062",
+        "v2_test_0066",
+        "v2_test_0070",
+        "v2_test_0077",
+        "v2_test_0080",
+        "v2_test_0083",
+        "v2_test_0087",
+        "v2_test_0088",
+        "v2_test_0098",
+        "v2_test_0103",
+        "v2_test_0117",
+        "v2_test_0118",
+        "v2_test_0126",
+        "v2_test_0133"
+      ]
+    },
+    "validation": {
+      "pool_size": 193,
+      "index": [
+        6,
+        40,
+        80,
+        140,
+        180
+      ],
+      "design_id": [
+        "validation_0006",
+        "validation_0040",
+        "v2_validation_0008",
+        "v2_validation_0068",
+        "v2_validation_0108"
+      ]
+    }
+  },
+  "case_rule": "single-band designs failing the mask, seed 2026; validation cases only for debugging code",
+  "model": "PRNet_lam0.3_s2026_b16_lossless10.0",
+  "target": "T2_mask_violation_dB (smooth, tau 0.05 dB)",
+  "fixed_inputs": "negative controls stay at the design's own values",
+  "k": 2,
+  "selectors": {
+    "primary": [
+      "shap_ref",
+      "ig",
+      "lime_delta",
+      "random"
+    ],
+    "secondary": [
+      "grad_x_span",
+      "lime_slope_x_span",
+      "ads_true_shap",
+      "shap_revert_no_search"
+    ],
+    "reference": [
+      "all6_surrogate",
+      "ads_coordinate"
+    ],
+    "attribution": "|phi| over the 6 geometry features; SHAP/IG/LIME settings exactly as in step 2/3",
+    "random_seed": "2026 + case index (0-based within the 30 test cases)"
+  },
+  "surrogate_search": {
+    "objective": "V_m(x) + 0.01 * ||(x - x0)/span||^2, V_m = smooth mask violation with all four limits tightened by m dB",
+    "k2": "41x41 grid over the box, best 5 grid points refined by 200 projected Adam steps (lr 0.01, normalized units)",
+    "k6": "512 starts (x0, baseline, 510 uniform random, seed 2026) x 300 projected Adam steps"
+  },
+  "ads_confirmation": {
+    "budget_per_method_case": 10,
+    "margin_dB": "0.25 * (k - 1) for call k = 1..10",
+    "repeat_proposal": "no simulation, margin escalates",
+    "stop": "first ADS pass (hard violation <= 1e-9)",
+    "shared_trajectories": "identical subspaces share simulations; counts are per method as if independent"
+  },
+  "ads_coordinate": {
+    "budget": 60,
+    "initial_step": "25% of declared span",
+    "order": "L1, L2, S1, S2, Wc1, Wc2; +step then -step",
+    "accept": "hard ADS violation decreases",
+    "shrink": "halve all steps after a full cycle without improvement"
+  },
+  "ads_true_shap": "64 coalition simulations per case (single reference, same game as step 3), counted separately",
+  "metrics": [
+    "ADS-confirmed success",
+    "ADS calls to success",
+    "best ADS hard violation on the trajectory",
+    "normalized geometry change ||delta/span||_2 of the final design",
+    "overlap of selected parameter pairs"
+  ],
+  "tests": {
+    "primary": "shap_ref / ig / lime_delta vs random: exact McNemar on success, Wilcoxon signed-rank on best violation, Holm over the three",
+    "secondary": "descriptive only"
+  }
+}

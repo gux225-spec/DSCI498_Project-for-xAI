@@ -1,0 +1,114 @@
+{
+  "all_ok": true,
+  "checks": {
+    "counts": {
+      "ok": true,
+      "train": 1008,
+      "validation": 216,
+      "test": 216
+    },
+    "test_labels_locked": {
+      "ok": true
+    },
+    "design_ids_disjoint": {
+      "ok": true
+    },
+    "design_ids_unique": {
+      "ok": true
+    },
+    "geometry_no_cross_split_duplicates": {
+      "ok": true,
+      "train_va": 0,
+      "train_te": 0,
+      "va_te": 0
+    },
+    "frequency_grid": {
+      "ok": true
+    },
+    "feature_order": {
+      "ok": true,
+      "names": [
+        "L1",
+        "L2",
+        "S1",
+        "S2",
+        "Wc1",
+        "Wc2",
+        "control_uniform",
+        "control_normal",
+        "control_unused_marker_mm"
+      ]
+    },
+    "train_normalization": {
+      "ok": true,
+      "mean_absmax": 1.3482003069498205e-08,
+      "std_range": [
+        0.9999995827674866,
+        1.0
+      ]
+    },
+    "finite": {
+      "ok": true
+    },
+    "train_dB_matches_complex": {
+      "ok": true,
+      "max_err": 0.0
+    },
+    "train_port1_power_balance": {
+      "ok": true,
+      "max_abs": 2.9976021664879227e-15
+    },
+    "validation_dB_matches_complex": {
+      "ok": true,
+      "max_err": 0.0
+    },
+    "validation_port1_power_balance": {
+      "ok": true,
+      "max_abs": 2.6645352591003757e-15
+    },
+    "regions": {
+      "ok": true,
+      "sizes": {
+        "low_stopband": 181,
+        "passband": 81,
+        "high_stopband": 181,
+        "transition": 158
+      }
+    },
+    "reference_point_normalized": {
+      "ok": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0,
+        0.0001,
+        0.0,
+        0.0001
+      ]
+    }
+  },
+  "groups": {
+    "train": {
+      "source": {
+        "legacy_4d_actual": 336,
+        "new_6d_actual": 672
+      },
+      "multiband": 75,
+      "mask_pass": 23
+    },
+    "validation": {
+      "source": {
+        "legacy_4d_actual": 72,
+        "new_6d_actual": 144
+      },
+      "multiband": 18,
+      "mask_pass": 5
+    },
+    "test": {
+      "source": {
+        "legacy_4d_actual": 72,
+        "new_6d_actual": 144
+      }
+    }
+  }
+}

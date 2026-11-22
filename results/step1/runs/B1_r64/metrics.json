@@ -1,0 +1,213 @@
+{
+  "tag": "B1_r64",
+  "model": "B1",
+  "rank": 64,
+  "seed": null,
+  "pca_explained_variance": 0.9999999329344236,
+  "pca_reconstruction_only_S21_MAE_dB": 0.009434465508374786,
+  "training": {
+    "seconds": 1890.7,
+    "kernels": [
+      "2.31**2 * Matern(length_scale=[12.5, 6.37, 73.7, 22, 61.1, 38.3, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "2.69**2 * Matern(length_scale=[9.25, 4.31, 63, 15, 49.4, 26.7, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "2.64**2 * Matern(length_scale=[9.51, 3.92, 70.4, 13.5, 51.1, 24.7, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.39**2 * Matern(length_scale=[6.69, 2.63, 49.3, 9.28, 37.5, 16.9, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.75**2 * Matern(length_scale=[6.92, 2.71, 52.8, 9.41, 38, 17.5, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "7.01**2 * Matern(length_scale=[7.86, 3.02, 58.7, 11.8, 43.3, 20.7, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "5.32**2 * Matern(length_scale=[6.5, 2.29, 47.3, 8.95, 33.7, 15.2, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.42**2 * Matern(length_scale=[6.06, 2.13, 42.5, 8.16, 30.6, 15.2, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "11.5**2 * Matern(length_scale=[12.1, 4.41, 60.1, 16.5, 55.5, 29, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.8**2 * Matern(length_scale=[4.62, 1.62, 34, 6.36, 23.2, 11.7, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.01e-10)",
+      "4.77**2 * Matern(length_scale=[4.6, 1.58, 33.8, 6.09, 24, 11, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "5.57**2 * Matern(length_scale=[4.28, 1.57, 29.6, 6.73, 22.7, 10.9, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.2**2 * Matern(length_scale=[3.7, 1.21, 26.7, 5.02, 19.8, 9.17, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.45**2 * Matern(length_scale=[3.46, 1.13, 24.6, 4.59, 18.9, 8, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.81**2 * Matern(length_scale=[3.29, 1.08, 23.3, 4.35, 16.3, 8.72, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.42e-10)",
+      "3.52**2 * Matern(length_scale=[2.59, 0.807, 18.8, 3.19, 12.6, 6.34, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "3.27**2 * Matern(length_scale=[2.23, 0.677, 15.9, 2.87, 11.3, 5.19, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "4.85**2 * Matern(length_scale=[2.79, 0.956, 18.1, 3.86, 13.9, 9.43, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.19e-10)",
+      "4.03**2 * Matern(length_scale=[2.31, 0.71, 16.4, 3.19, 12.2, 5.23, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.54e-10)",
+      "5.64**2 * Matern(length_scale=[3.14, 1.16, 21.4, 5.06, 18.6, 7.87, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "3.87**2 * Matern(length_scale=[2.3, 0.741, 13.8, 2.95, 11.3, 7.36, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "2.43**2 * Matern(length_scale=[1.62, 0.47, 13.6, 2.04, 8.7, 4.29, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=8.1e-10)",
+      "4.56**2 * Matern(length_scale=[3.5, 1.18, 17.6, 4.68, 16.3, 9.32, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1e-10)",
+      "2.73**2 * Matern(length_scale=[1.71, 0.517, 14.3, 2.03, 8.65, 4.16, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.8e-10)",
+      "1.79**2 * Matern(length_scale=[1.15, 0.327, 9.16, 1.33, 6.44, 2.76, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.33e-09)",
+      "2.67**2 * Matern(length_scale=[1.4, 0.451, 9.26, 2.06, 6.63, 4.72, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=2.72e-09)",
+      "2.12**2 * Matern(length_scale=[1.17, 0.417, 6.63, 1.82, 5.95, 3.15, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.39e-09)",
+      "3.56**2 * Matern(length_scale=[1.67, 0.631, 8.79, 2.81, 7.24, 9.81, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=5.72e-10)",
+      "1.75**2 * Matern(length_scale=[1.05, 0.319, 6.05, 1.33, 4.52, 2.8, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=2.03e-09)",
+      "1.69**2 * Matern(length_scale=[0.934, 0.269, 6.76, 1.08, 5.73, 3.42, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=3.01e-08)",
+      "1.38**2 * Matern(length_scale=[0.809, 0.207, 5.76, 0.852, 5.46, 1.91, 81.4, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.95e-05)",
+      "1.36**2 * Matern(length_scale=[0.786, 0.225, 4.93, 0.909, 4.38, 2.32, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=7.71e-09)",
+      "1.2**2 * Matern(length_scale=[0.677, 0.313, 5.14, 1.19, 3.9, 1.99, 47, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=7.44e-06)",
+      "1.28**2 * Matern(length_scale=[0.694, 0.192, 3.95, 0.819, 2.64, 2.67, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.24e-05)",
+      "1.61**2 * Matern(length_scale=[0.904, 0.403, 4.71, 1.68, 4.16, 3.97, 42.2, 53.6, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.08e-05)",
+      "1**2 * Matern(length_scale=[0.356, 0.674, 0.827, 1e+03, 1.18, 1e+03, 3.2, 0.261, 0.18], nu=2.5) + WhiteKernel(noise_level=9.77e-05)",
+      "1.78**2 * Matern(length_scale=[1.04, 0.443, 4.12, 2.09, 3.43, 4.47, 27.1, 46.2, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.97e-05)",
+      "1.08**2 * Matern(length_scale=[0.534, 0.142, 3.31, 0.561, 6.29, 0.938, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=3.16e-08)",
+      "1.53**2 * Matern(length_scale=[0.726, 0.312, 3.87, 1.23, 2.92, 5.04, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=1.35e-08)",
+      "1.02**2 * Matern(length_scale=[0.27, 1.33, 1.62, 0.958, 1.69, 2.03, 3.15, 0.583, 0.346], nu=2.5) + WhiteKernel(noise_level=0.0001)",
+      "1.28**2 * Matern(length_scale=[0.702, 0.217, 2.69, 0.845, 2.02, 3.02, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=2.45e-08)",
+      "1.09**2 * Matern(length_scale=[0.501, 0.146, 3.01, 0.629, 2.19, 1.08, 12.9, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=7.8e-08)",
+      "1.77**2 * Matern(length_scale=[0.752, 0.626, 3.58, 3.99, 3.12, 10.5, 1e+03, 20.9, 998], nu=2.5) + WhiteKernel(noise_level=0.0809)",
+      "1.03**2 * Matern(length_scale=[0.832, 0.966, 0.36, 0.507, 2.6, 1.5, 0.205, 980, 2.35], nu=2.5) + WhiteKernel(noise_level=9.82e-05)",
+      "1.05**2 * Matern(length_scale=[0.52, 1.05, 0.549, 0.785, 1.16, 365, 1.21, 1e+03, 0.349], nu=2.5) + WhiteKernel(noise_level=0.000101)",
+      "1.02**2 * Matern(length_scale=[0.449, 2.18, 0.33, 0.256, 0.749, 1e+03, 1e+03, 0.855, 1.32], nu=2.5) + WhiteKernel(noise_level=9.84e-05)",
+      "1.06**2 * Matern(length_scale=[0.758, 1.9, 0.309, 0.327, 0.873, 2.91, 1e+03, 1.31, 2.52], nu=2.5) + WhiteKernel(noise_level=9.87e-05)",
+      "1.09**2 * Matern(length_scale=[0.639, 0.148, 2.69, 0.679, 1.41, 0.905, 19.2, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=0.000124)",
+      "1.56**2 * Matern(length_scale=[0.728, 0.528, 2.64, 3, 2.41, 4.5, 39.1, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=0.1)",
+      "1.12**2 * Matern(length_scale=[0.381, 0.283, 1.39, 2.17, 1.3, 4.95, 1e+03, 3.24, 2.3], nu=2.5) + WhiteKernel(noise_level=0.000102)",
+      "1.01**2 * Matern(length_scale=[110, 0.134, 1.82, 0.414, 2.2, 183, 1e+03, 0.622, 0.121], nu=2.5) + WhiteKernel(noise_level=9.88e-05)",
+      "1.16**2 * Matern(length_scale=[0.703, 0.181, 2.93, 0.633, 1.65, 1.99, 1e+03, 4.79, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.89e-05)",
+      "1.11**2 * Matern(length_scale=[0.543, 0.175, 2.25, 0.692, 1.28, 1.34, 1e+03, 1e+03, 595], nu=2.5) + WhiteKernel(noise_level=0.0001)",
+      "1.01**2 * Matern(length_scale=[0.35, 0.211, 75.2, 0.912, 0.923, 4.01, 0.677, 111, 0.255], nu=2.5) + WhiteKernel(noise_level=9.77e-05)",
+      "1.92**2 * Matern(length_scale=[0.642, 0.534, 2.7, 4.49, 2.37, 5.31, 61.9, 22.5, 23.5], nu=2.5) + WhiteKernel(noise_level=0.0122)",
+      "1.02**2 * Matern(length_scale=[0.393, 0.213, 0.554, 268, 1.05, 2.16, 0.656, 0.73, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.9e-05)",
+      "1.45**2 * Matern(length_scale=[0.473, 0.42, 2.13, 2.91, 1.89, 3.45, 15.6, 7.85, 29.1], nu=2.5) + WhiteKernel(noise_level=0.000101)",
+      "1.03**2 * Matern(length_scale=[0.346, 0.0861, 2.29, 0.446, 1.64, 1.29, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.8e-05)",
+      "1.01**2 * Matern(length_scale=[0.469, 0.899, 1.43, 0.987, 4.69, 1.39, 0.21, 0.738, 0.341], nu=2.5) + WhiteKernel(noise_level=9.95e-05)",
+      "1.02**2 * Matern(length_scale=[0.391, 0.0774, 1.65, 0.56, 1.64, 0.893, 1e+03, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=9.77e-05)",
+      "1.11**2 * Matern(length_scale=[0.623, 0.639, 0.764, 0.607, 1.32, 716, 0.625, 1e+03, 1e+03], nu=2.5) + WhiteKernel(noise_level=0.000101)",
+      "1.11**2 * Matern(length_scale=[0.736, 0.184, 1.36, 0.885, 1.45, 1.58, 1e+03, 5.04, 1.95], nu=2.5) + WhiteKernel(noise_level=9.86e-05)",
+      "1.2**2 * Matern(length_scale=[0.421, 0.378, 0.791, 1.41, 1.74, 5.39, 1e+03, 1e+03, 2.49], nu=2.5) + WhiteKernel(noise_level=2.92e-07)",
+      "1.05**2 * Matern(length_scale=[0.962, 0.574, 0.754, 1.05, 0.295, 0.973, 1.31, 1e+03, 1.79], nu=2.5) + WhiteKernel(noise_level=0.0145)"
+    ]
+  },
+  "validation": {
+    "all": {
+      "n_designs": 216,
+      "S21_full_MAE_dB": 0.07855530683480537,
+      "S21_passband_MAE_dB": 0.04842729885804042,
+      "S11_full_MAE_dB": 0.10989560876805471,
+      "S11_MAE_true_ge_m30dB": 0.06546669332744848,
+      "edge_MAE_MHz": 9.684680493466605,
+      "edge_P95_MHz": 16.91399549373873,
+      "n_edges": 396,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.07581913650631876,
+        "passband": 0.04842729885804042,
+        "high_stopband": 0.0681850804704656,
+        "transition": 0.10901496789505556
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.00590791444329539,
+        "passband": 0.33365384267076537,
+        "high_stopband": 0.010256633262682172,
+        "transition": 0.22845263593979082
+      },
+      "complex_RMSE": 0.009259017548346246,
+      "power_balance_max_abs": 0.5338991972411282,
+      "power_balance_mean_abs": 0.005100512802450682,
+      "passes_gate": {
+        "S21_full_MAE_dB": true,
+        "S21_passband_MAE_dB": true,
+        "S11_full_MAE_dB": true,
+        "S11_MAE_true_ge_m30dB": true,
+        "edge_MAE_MHz": true,
+        "edge_P95_MHz": true
+      },
+      "composite_score": 0.34198825080154
+    },
+    "legacy_4d": {
+      "n_designs": 72,
+      "S21_full_MAE_dB": 0.057105441638728986,
+      "S21_passband_MAE_dB": 0.02981721397845281,
+      "S11_full_MAE_dB": 0.06771748925229758,
+      "S11_MAE_true_ge_m30dB": 0.03918428817510089,
+      "edge_MAE_MHz": 2.751207661761193,
+      "edge_P95_MHz": 8.569881260295094,
+      "n_edges": 128,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.060779080841863016,
+        "passband": 0.02981721397845281,
+        "high_stopband": 0.05358398387220208,
+        "transition": 0.07092064164161813
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.004431945051929579,
+        "passband": 0.2098199665493531,
+        "high_stopband": 0.007001135669831042,
+        "transition": 0.1369202920221175
+      },
+      "complex_RMSE": 0.0053500196289433454,
+      "power_balance_max_abs": 0.1691766409446238,
+      "power_balance_mean_abs": 0.0032540686510672983
+    },
+    "new_6d": {
+      "n_designs": 144,
+      "S21_full_MAE_dB": 0.08928023943284355,
+      "S21_passband_MAE_dB": 0.05773234129783421,
+      "S11_full_MAE_dB": 0.13098466852593327,
+      "S11_MAE_true_ge_m30dB": 0.07862480627403219,
+      "edge_MAE_MHz": 12.99618990562441,
+      "edge_P95_MHz": 19.808088265174273,
+      "n_edges": 268,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.08333916433854663,
+        "passband": 0.05773234129783421,
+        "high_stopband": 0.07548562876959737,
+        "transition": 0.12806213102177427
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.006645899138978297,
+        "passband": 0.39557078073147156,
+        "high_stopband": 0.011884382059107737,
+        "transition": 0.27421880789862746
+      },
+      "complex_RMSE": 0.010690311217445266,
+      "power_balance_max_abs": 0.5338991972411282,
+      "power_balance_mean_abs": 0.006023734878142372
+    },
+    "single_band": {
+      "n_designs": 198,
+      "S21_full_MAE_dB": 0.07668548072295689,
+      "S21_passband_MAE_dB": 0.04869471022429617,
+      "S11_full_MAE_dB": 0.11096317659350491,
+      "S11_MAE_true_ge_m30dB": 0.06470881361723185,
+      "edge_MAE_MHz": 9.684680493466605,
+      "edge_P95_MHz": 16.91399549373873,
+      "n_edges": 396,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.07491095252059328,
+        "passband": 0.04869471022429617,
+        "high_stopband": 0.06695346250119809,
+        "transition": 0.10421672954041054
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.00589439280336304,
+        "passband": 0.3533934063567996,
+        "high_stopband": 0.009517945526827295,
+        "transition": 0.22325550620272935
+      },
+      "complex_RMSE": 0.008108726218872408,
+      "power_balance_max_abs": 0.2623530434550203,
+      "power_balance_mean_abs": 0.004845698654594496
+    },
+    "multiband": {
+      "n_designs": 18,
+      "S21_full_MAE_dB": 0.0991233940651385,
+      "S21_passband_MAE_dB": 0.0454857738292271,
+      "S11_full_MAE_dB": 0.09815236268810243,
+      "S11_MAE_true_ge_m30dB": 0.07373232331346061,
+      "edge_MAE_MHz": NaN,
+      "edge_P95_MHz": NaN,
+      "n_edges": 0,
+      "S21_MAE_by_region_dB": {
+        "low_stopband": 0.08580916034929895,
+        "passband": 0.0454857738292271,
+        "high_stopband": 0.08173287813240837,
+        "transition": 0.16179558979615075
+      },
+      "S11_MAE_by_region_dB": {
+        "low_stopband": 0.006056652482551252,
+        "passband": 0.1165186421243887,
+        "high_stopband": 0.01838219835708582,
+        "transition": 0.2856210630474668
+      },
+      "complex_RMSE": 0.017478187025778386,
+      "power_balance_max_abs": 0.5338991972411282,
+      "power_balance_mean_abs": 0.00790346842886874
+    }
+  }
+}

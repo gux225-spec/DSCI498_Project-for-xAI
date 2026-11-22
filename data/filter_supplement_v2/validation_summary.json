@@ -1,0 +1,231 @@
+{
+  "status": "complete",
+  "source_type": "ADS 2026 circuit simulation, not EM or hardware",
+  "legacy_actual_designs": 480,
+  "new_actual_primary_designs": 960,
+  "core_unique_designs": 1440,
+  "core_frequency_rows": 865440,
+  "core_split_counts": {
+    "train": 1008,
+    "validation": 216,
+    "test": 216
+  },
+  "wideband_designs": 1440,
+  "wideband_frequency_rows": 3025440,
+  "wideband_range_GHz": [
+    9,
+    30
+  ],
+  "new_diagnostic_scenarios": 25,
+  "new_fine_runs": 5,
+  "new_native_simulation_total": 1470,
+  "candidate_input_columns": 25,
+  "negative_control_replicates": 3,
+  "new_main_LHS_rank": 6,
+  "original_data_preserved": true,
+  "raw_integrity": {
+    "complete_run_count": 1465,
+    "all_raw_hashes_match": true,
+    "netlist_parameters_match": true,
+    "original_release_hashes_match": true,
+    "source_export_alignment_sample_ids": [
+      "diagnostic_baseline",
+      "diagnostic_Wc1_low",
+      "diagnostic_Wc2_high",
+      "diagnostic_TanD_2",
+      "diagnostic_conductor_loss_2",
+      "v2_train_0000",
+      "v2_train_0671",
+      "wide_completion_train_0000",
+      "wide_completion_train_0335",
+      "v2_validation_0000",
+      "v2_validation_0143",
+      "wide_completion_validation_0000",
+      "wide_completion_validation_0071",
+      "v2_test_0000",
+      "v2_test_0143",
+      "wide_completion_test_0000",
+      "wide_completion_test_0071"
+    ],
+    "s2p_vs_response_npz_max_error": 7.850462293418876e-17,
+    "native_ds_vs_response_npz_max_error": 0.0
+  },
+  "fine_grid_checks": [
+    {
+      "design_id": "diagnostic_baseline",
+      "aligned_complex_S_max_abs_error": 0.0,
+      "fixed_passband_group_delay_max_abs_difference_ps": 0.18383660279075453
+    },
+    {
+      "design_id": "diagnostic_Wc1_low",
+      "aligned_complex_S_max_abs_error": 0.0,
+      "fixed_passband_group_delay_max_abs_difference_ps": 0.14284652820062416
+    },
+    {
+      "design_id": "diagnostic_Wc1_high",
+      "aligned_complex_S_max_abs_error": 0.0,
+      "fixed_passband_group_delay_max_abs_difference_ps": 0.2898022899764374
+    },
+    {
+      "design_id": "diagnostic_Wc2_low",
+      "aligned_complex_S_max_abs_error": 0.0,
+      "fixed_passband_group_delay_max_abs_difference_ps": 0.18751093347990633
+    },
+    {
+      "design_id": "diagnostic_Wc2_high",
+      "aligned_complex_S_max_abs_error": 0.0,
+      "fixed_passband_group_delay_max_abs_difference_ps": 0.1834873530807135
+    }
+  ],
+  "no_neural_training": true,
+  "main_lossless_max_unitarity_error": 8.809542746987826e-15,
+  "all_runs_max_passivity_excess": 4.440892098500626e-15,
+  "all_runs_max_reciprocity_error": 8.893583321307837e-15,
+  "provisional_mask_pass_count": 34,
+  "legacy_wideband_completion": "All 480 legacy geometries actually resimulated over 9-30 GHz; no model-filled labels.",
+  "pending": [
+    "EM mesh convergence across parameter domain",
+    "dense/full-domain EM surrogate data",
+    "calibrated modal features Z0e/Z0o and Qe",
+    "sufficient changed-material learning data"
+  ],
+  "EM_diagnostics": {
+    "status": "completed_and_kept_separate",
+    "unique_geometries": 13,
+    "coarse_sweeps_in_parameter_table": 14,
+    "coarse_frequency_step_MHz": 100,
+    "native_baseline_points": 601,
+    "native_baseline_step_MHz": 10,
+    "baseline_circuit_f0_GHz": 12.051738091275364,
+    "baseline_EM_f0_GHz": 12.175649116541209,
+    "baseline_EM_minus_circuit_f0_MHz": 123.91102526584419,
+    "baseline_mesh_check": {
+      "baseline_only": true,
+      "cells_per_wavelength": [
+        30,
+        45
+      ],
+      "frequency_step_MHz": 100,
+      "max_complex_S_difference": 0.10664384336185678,
+      "fixed_passband_max_S21_difference_dB": 0.34995664836886853,
+      "center_difference_MHz": 17.86355561050712,
+      "qualification": "Two mesh settings on one geometry; does not establish convergence of every EM design or dense notches."
+    },
+    "focused_mesh_followup": {
+      "comparisons": [
+        {
+          "mesh_from": 30,
+          "mesh_to": 45,
+          "shared_frequency_points": 61,
+          "fixed_passband_shared_S21_max_difference_dB": 0.34995664836886853,
+          "shared_max_complex_difference": 0.10664384336185678,
+          "center_from_GHz": 12.17393379789835,
+          "center_to_GHz": 12.156070242287843,
+          "center_difference_MHz": 17.86355561050712,
+          "BW_difference_MHz": 1.0301032602679783
+        },
+        {
+          "mesh_from": 45,
+          "mesh_to": 60,
+          "shared_frequency_points": 20,
+          "fixed_passband_shared_S21_max_difference_dB": 0.4173224592855327,
+          "shared_max_complex_difference": 0.09558760431298985,
+          "center_from_GHz": 12.156070242287843,
+          "center_to_GHz": 12.13971147370939,
+          "center_difference_MHz": 16.358768578452754,
+          "BW_difference_MHz": 22.387520161263552
+        },
+        {
+          "mesh_from": 60,
+          "mesh_to": 90,
+          "shared_frequency_points": 20,
+          "fixed_passband_shared_S21_max_difference_dB": 0.1404809125089994,
+          "shared_max_complex_difference": 0.12314561235961545,
+          "center_from_GHz": 12.13971147370939,
+          "center_to_GHz": 12.126886354473578,
+          "center_difference_MHz": 12.825119235811755,
+          "BW_difference_MHz": 2.026851270604979
+        }
+      ],
+      "provisional_focus_limits": {
+        "S21_difference_dB": 0.02,
+        "center_difference_MHz": 2.0
+      },
+      "last_pair_within_focus_limits": false,
+      "scope": "One baseline, shared in-band frequencies. Does not certify all 13 geometries, narrow S11 minima or unobserved frequency intervals."
+    },
+    "quality_status": "preliminary: baseline mesh sensitivity observed; domain-wide EM convergence not established",
+    "qualification": "Not a 1440-design EM training set. Parameterized conductor outlines verified against native nominal export. Coarse sweeps are diagnostic, not dense interpolated labels."
+  },
+  "EM_source_geometry_reproduction": {
+    "native_exported_conductor_count": 5,
+    "parametric_conductor_count": 5,
+    "nominal_polygon_vertices_after_collinear_simplification_match": true,
+    "physical_model": "Same ideal substrate and PCell pad-width conventions as native export; changed geometry is encoded directly into verified planar outlines.",
+    "native_61_vs_native_601_aligned_max_complex_S_difference": 0.00015366253462702586,
+    "original_strict_1e_minus6_complex_repeatability_met": false,
+    "engineering_reproduction": {
+      "max_complex_S_difference": 0.00012610304796474572,
+      "passband_max_S21_difference_dB": 0.00029962300511021667,
+      "center_difference_MHz": 0.019944551382877762,
+      "bandwidth_difference_MHz": 0.008809588683433844,
+      "limits": {
+        "max_complex_S_difference": 0.001,
+        "passband_difference_dB": 0.01,
+        "center_and_BW_difference_MHz": 1.0
+      },
+      "scope": "Geometrically identical nominal outlines, adequate for coarse diagnostic comparisons; not exact numerical equality. Limits are engineering choices, not published standards."
+    },
+    "parametric_61_vs_native_61_max_complex_S_difference": 0.00012610304796474572
+  },
+  "final_package_checks": {
+    "arrays": [
+      {
+        "split": "train",
+        "band": "core",
+        "designs": 1008,
+        "points": 601,
+        "passed": true
+      },
+      {
+        "split": "train",
+        "band": "wideband",
+        "designs": 1008,
+        "points": 2101,
+        "passed": true
+      },
+      {
+        "split": "validation",
+        "band": "core",
+        "designs": 216,
+        "points": 601,
+        "passed": true
+      },
+      {
+        "split": "validation",
+        "band": "wideband",
+        "designs": 216,
+        "points": 2101,
+        "passed": true
+      },
+      {
+        "split": "test",
+        "band": "core",
+        "designs": 216,
+        "points": 601,
+        "passed": true
+      },
+      {
+        "split": "test",
+        "band": "wideband",
+        "designs": 216,
+        "points": 2101,
+        "passed": true
+      }
+    ],
+    "loaders_all_control_replicates_passed": true,
+    "unique_designs_and_splits_verified": true,
+    "core_wide_shared_S_max_error": 0.0,
+    "model_fitting_performed": false
+  }
+}

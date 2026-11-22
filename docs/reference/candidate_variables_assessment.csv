@@ -1,0 +1,12 @@
+﻿variable,source,role,existing_data_support,recommendation,qualification
+"L1,L2","CLin1.L,CLin2.L",independent_design,varied,retain,Current training inputs; both shared halves change together.
+"S1,S2","CLin1.S,CLin2.S",independent_design,varied,retain,Current training inputs. External/internal coupling roles need circuit-topology interpretation.
+"Wc1,Wc2","CLin1.W,CLin2.W",independent_design,constant_25.5_31.5_mil,first_expansion_candidates,"Validate local sensitivity before six-dimensional sampling; these are electrical W parameters, not layout-only W1/W2."
+Er,MSub1.Er,material,constant_3.78,separate_material_or_tolerance_study,Use material-supported range; cannot learn dependence from a constant column.
+H,MSub1.H,material_stack,constant_15_mil,separate_material_or_tolerance_study,Changes W/H and S/H as well as propagation; use stack-up/manufacturing evidence for bounds.
+TanD,MSub1.TanD,material_loss,constant_zero,separate_lossy_physics_version,Pair with realistic metal conductivity/thickness if studying practical insertion loss.
+Lfeed,TL1.L,independent_design_or_reference,constant_100_mil,secondary_diagnostic,"Prioritize for phase/group delay; amplitude effect depends on mismatch, not assumed zero. Preserve port reference planes."
+"Z0e,Z0o",LineCalc for each coupled-line cross section,derived_physical,not_extracted,candidate_after_calibration,"Validate units, W/S/H/Er/T and frequency-dependent assumptions against LineCalc or an independent solver."
+"theta_e,theta_o",beta_e/o(f)*L,derived_physical,not_extracted,candidate_after_modal_calibration,Two modes can have different effective permittivities. Must recompute for geometry and queried frequency.
+k_line_proxy,(Z0e-Z0o)/(Z0e+Z0o),derived_proxy,not_extracted,supplementary_only,Label as coupled-line proxy; not automatically the filter resonator coupling coefficient k. Do not use only S2 without width/substrate/frequency assumptions.
+Qe,external-coupling calibration/extraction,derived_identified_parameter,not_identified,do_not_add_yet,Cannot calculate uniquely from S1 alone or substitute whole-filter f0/BW. Need identified resonator/port extraction topology and calibration.

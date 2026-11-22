@@ -1,0 +1,305 @@
+{
+  "case_mesh_level": "m4",
+  "baseline": {
+    "ads": {
+      "f0_GHz": 12.051738078020247,
+      "BW_GHz": 1.2867348199526756,
+      "peak_S21_dB": -3.7994075358455976e-06,
+      "mask_violation_dB": 0.0,
+      "mask_components_dB": {
+        "passband_S21": 0.0,
+        "passband_S11": 0.0,
+        "low_stopband_S21": 0.0,
+        "high_stopband_S21": 0.0
+      }
+    },
+    "openems_mesh_study": [
+      {
+        "level": "m1",
+        "mesh_lines_xyz": [
+          149,
+          90,
+          18
+        ],
+        "elapsed_s": 53.30389380455017,
+        "f0_GHz": 11.890414588773758,
+        "BW_GHz": 1.2317455030343467,
+        "mask_violation_dB": 9.677964040706925
+      },
+      {
+        "level": "m2",
+        "mesh_lines_xyz": [
+          279,
+          118,
+          21
+        ],
+        "elapsed_s": 117.91460609436035,
+        "f0_GHz": 11.976636800353244,
+        "BW_GHz": 1.2054642706862175,
+        "mask_violation_dB": 3.399534232777963
+      },
+      {
+        "level": "m3",
+        "mesh_lines_xyz": [
+          403,
+          171,
+          24
+        ],
+        "elapsed_s": 291.68568444252014,
+        "f0_GHz": 12.012757577078665,
+        "BW_GHz": 1.1799223950818423,
+        "mask_violation_dB": 1.3488116522932527
+      },
+      {
+        "level": "m4",
+        "mesh_lines_xyz": [
+          607,
+          244,
+          26
+        ],
+        "elapsed_s": 796.4535162448883,
+        "f0_GHz": 12.034340424127606,
+        "BW_GHz": 1.162766436601263,
+        "mask_violation_dB": 1.2254983941413982
+      }
+    ],
+    "momentum_mesh": [
+      {
+        "cells_per_wavelength": 30,
+        "f0_GHz": 12.177506977817442
+      },
+      {
+        "cells_per_wavelength": 45,
+        "f0_GHz": 12.156070242287843
+      },
+      {
+        "cells_per_wavelength": 60,
+        "f0_GHz": 12.13971147370939
+      },
+      {
+        "cells_per_wavelength": 90,
+        "f0_GHz": 12.126886354473578
+      }
+    ],
+    "momentum_601_30cells": {
+      "f0_GHz": 12.177506977817442,
+      "BW_GHz": 1.1305553925225382,
+      "peak_S21_dB": -0.13343691837242064,
+      "mask_violation_dB": 2.6994969405373985,
+      "mask_components_dB": {
+        "passband_S21": 2.6994969405373985,
+        "passband_S11": 0.0,
+        "low_stopband_S21": 0.0,
+        "high_stopband_S21": 0.0
+      }
+    }
+  },
+  "cases": [
+    {
+      "design_id": "test_0005",
+      "shap_pair": "L1,S2",
+      "ads_x0": {
+        "f0_GHz": 12.046219598003656,
+        "BW_GHz": 1.3733584205941387,
+        "peak_S21_dB": -0.0020461995266005694,
+        "mask_violation_dB": 7.905882220198518,
+        "mask_components_dB": {
+          "passband_S21": 1.785976055888935,
+          "passband_S11": 6.119906164309583,
+          "low_stopband_S21": 0.0,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_x0": {
+        "f0_GHz": 12.02752407546777,
+        "BW_GHz": 1.2092763847874721,
+        "peak_S21_dB": -0.5855866109619616,
+        "mask_violation_dB": 6.366268729410979,
+        "mask_components_dB": {
+          "passband_S21": 2.1888301042060716,
+          "passband_S11": 4.177438625204908,
+          "low_stopband_S21": 0.0,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "ads_tuned": {
+        "f0_GHz": 11.90539447418794,
+        "BW_GHz": 1.2724146380398587,
+        "peak_S21_dB": -7.93515848257714e-06,
+        "mask_violation_dB": 0.0,
+        "mask_components_dB": {
+          "passband_S21": 0.0,
+          "passband_S11": 0.0,
+          "low_stopband_S21": 0.0,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_tuned": {
+        "f0_GHz": 11.85619904911657,
+        "BW_GHz": 1.1486986442343188,
+        "peak_S21_dB": -0.39859753055746294,
+        "mask_violation_dB": 10.194001563572062,
+        "mask_components_dB": {
+          "passband_S21": 1.8622198739419566,
+          "passband_S11": 4.993763319551646,
+          "low_stopband_S21": 3.3380183700784585,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_improvement_dB": -3.8277328341610826,
+      "oems_tuned_passes": false,
+      "f0_shift_oems_minus_ads_MHz": {
+        "x0": -18.6955225358858,
+        "tuned": -49.195425071369314
+      }
+    },
+    {
+      "design_id": "test_0015",
+      "shap_pair": "L1,L2",
+      "ads_x0": {
+        "f0_GHz": 11.726797635756293,
+        "BW_GHz": 1.3042471097793786,
+        "peak_S21_dB": -0.0017444806535376275,
+        "mask_violation_dB": 15.218440099207788,
+        "mask_components_dB": {
+          "passband_S21": 2.980093669432412,
+          "passband_S11": 7.413598593891795,
+          "low_stopband_S21": 4.824747835883581,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_x0": {
+        "f0_GHz": 11.702028646382928,
+        "BW_GHz": 1.153359220137828,
+        "peak_S21_dB": -0.7582462521541806,
+        "mask_violation_dB": 20.799656203670033,
+        "mask_components_dB": {
+          "passband_S21": 5.244033107620257,
+          "passband_S11": 8.071108398581783,
+          "low_stopband_S21": 7.4845146974679935,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "ads_tuned": {
+        "f0_GHz": 11.946006594253035,
+        "BW_GHz": 1.291269948741613,
+        "peak_S21_dB": -3.6554804135427994e-05,
+        "mask_violation_dB": 0.0,
+        "mask_components_dB": {
+          "passband_S21": 0.0,
+          "passband_S11": 0.0,
+          "low_stopband_S21": 0.0,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_tuned": {
+        "f0_GHz": 11.89742720534585,
+        "BW_GHz": 1.1625984915152596,
+        "peak_S21_dB": -0.3970282617875639,
+        "mask_violation_dB": 7.2847656183424645,
+        "mask_components_dB": {
+          "passband_S21": 1.159442236838933,
+          "passband_S11": 3.0773923727621986,
+          "low_stopband_S21": 3.047931008741333,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_improvement_dB": 13.514890585327567,
+      "oems_tuned_passes": false,
+      "f0_shift_oems_minus_ads_MHz": {
+        "x0": -24.768989373365358,
+        "tuned": -48.57938890718572
+      }
+    },
+    {
+      "design_id": "test_0034",
+      "shap_pair": "L2,S1",
+      "ads_x0": {
+        "f0_GHz": 11.772234326244064,
+        "BW_GHz": 1.2651169342414086,
+        "peak_S21_dB": -0.0006460128599344927,
+        "mask_violation_dB": 13.269488313910713,
+        "mask_components_dB": {
+          "passband_S21": 2.395919797509884,
+          "passband_S11": 6.872225780303989,
+          "low_stopband_S21": 4.001342736096841,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_x0": {
+        "f0_GHz": 11.747205281102275,
+        "BW_GHz": 1.1226805209801594,
+        "peak_S21_dB": -0.5667023302595604,
+        "mask_violation_dB": 18.367176056218824,
+        "mask_components_dB": {
+          "passband_S21": 4.366055402607982,
+          "passband_S11": 7.719334692743116,
+          "low_stopband_S21": 6.281785960867726,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "ads_tuned": {
+        "f0_GHz": 12.007345856063877,
+        "BW_GHz": 1.2756713271718958,
+        "peak_S21_dB": -3.347505825872673e-06,
+        "mask_violation_dB": 0.0,
+        "mask_components_dB": {
+          "passband_S21": 0.0,
+          "passband_S11": 0.0,
+          "low_stopband_S21": 0.0,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_tuned": {
+        "f0_GHz": 11.954461717844339,
+        "BW_GHz": 1.134009671769638,
+        "peak_S21_dB": -0.4457433804065771,
+        "mask_violation_dB": 4.998917186987901,
+        "mask_components_dB": {
+          "passband_S21": 0.8720116165694289,
+          "passband_S11": 1.9399060564822648,
+          "low_stopband_S21": 2.1869995139362075,
+          "high_stopband_S21": 0.0
+        }
+      },
+      "oems_improvement_dB": 13.368258869230923,
+      "oems_tuned_passes": false,
+      "f0_shift_oems_minus_ads_MHz": {
+        "x0": -25.02904514178894,
+        "tuned": -52.884138219537746
+      }
+    }
+  ],
+  "baseline_oems_case_level": {
+    "level": "m4",
+    "mesh": {
+      "version": 1,
+      "max_cell_metal": 1.3,
+      "max_cell_far": 25.0,
+      "gap_cells": 8,
+      "merge_tol": 0.3,
+      "sub_cells": 10,
+      "air_top": 250.0,
+      "y_margin": 150.0,
+      "port_ext": 200.0,
+      "end_criteria": 0.0001,
+      "max_ts": 400000
+    },
+    "mesh_lines_xyz": [
+      607,
+      244,
+      26
+    ],
+    "elapsed_s": 796.4535162448883,
+    "f0_GHz": 12.034340424127606,
+    "BW_GHz": 1.162766436601263,
+    "peak_S21_dB": -0.40984566460558175,
+    "mask_violation_dB": 1.2254983941413982,
+    "mask_components_dB": {
+      "passband_S21": 1.2254983941413982,
+      "passband_S11": 0.0,
+      "low_stopband_S21": 0.0,
+      "high_stopband_S21": 0.0
+    }
+  }
+}
