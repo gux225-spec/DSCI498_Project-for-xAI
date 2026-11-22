@@ -38,3 +38,11 @@ docs/reference/shap_lime_filter_paper.txt
 *.fls
 *.out
 *.synctex.gz
+
+# Keep the public working tree focused on code; restore these from Drive.
+/docs/
+/report/
+/results/
+/DATASET_REVIEW.md
+/data/filter_supplement_v2/*
+!/data/filter_supplement_v2/scripts/

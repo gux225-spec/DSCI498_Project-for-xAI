@@ -1,7 +1,0 @@
-{
-  "independent_physical_design_features": 6,
-  "fixed_primary_physical_metadata_features": 7,
-  "deterministic_geometry_transforms": 9,
-  "synthetic_negative_controls": 3,
-  "candidate_columns_total": 25
-}
