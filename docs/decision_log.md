@@ -145,3 +145,13 @@ The audit and package manifests are current integrity checks. They preserve the 
 **Evidence:** [verifier](../scripts/verify_submission.py), [packager](../scripts/build_submission.py), [runbook](reproducibility.md), [audit](../results/submission_audit/verification.md). Archive file-size/SHA256 manifests establish the release's current byte-level contents.
 
 **Retained issues:** relative versus absolute bandwidth definitions; mixed smooth/hard violation-error statistic; draft TODOs/PDF-source mismatch; four historical hash differences. These are disclosed rather than silently rewriting old metrics or timestamps. Final report/reflection authoring remains a separate step.
+
+### D13 Publish the selected code and complete the final written materials
+
+**Timing:** November 22, 2026, following the author's explicit request to upload with local Git and complete the requirements.
+
+**Decision:** initialize the local repository with the supplied commit email, push selected source/documentation and lightweight results to [the author-provided repository](https://github.com/gux225-spec/DSCI498_Project-for-xAI), and preserve exact archived line endings through `.gitattributes`. Keep large binary evidence separate from Git history. Create independent final-report and AI-reflection projects, leaving the original draft unchanged.
+
+**Reason:** the final submission needs inspectable code, a working repository link, a 6–8 page conference report, a 1–2 page AI-use reflection and an explicit requirements mapping. Completed final materials replace preparation placeholders without altering original experiment evidence. Historical bandwidth definitions and mixed-metric records remain disclosed; the final report uses correctly qualified and case-specific values.
+
+**Evidence:** [requirements matrix](submission_checklist.md), [final report](../report/final/DSCI498_FinalReport.pdf), [AI-use reflection](../report/ai_use_reflection/DSCI498_AI_Use_Reflection.pdf), [compiled artifact checks](../results/submission_audit/final_artifacts.json), and the remote Git history. The report is 8 pages and reflection 2 pages; all rendered pages were inspected. The initial selected-code commit is `bbe8ba8`; subsequent commits contain the completed materials. Binary evidence is provided through a separate submission release, with file-level and archive checksums; the third-party full-text working reference is omitted while citations remain. The live oral defense and course-platform submission remain actions for the author.

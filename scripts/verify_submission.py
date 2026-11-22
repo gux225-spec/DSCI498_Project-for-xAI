@@ -352,7 +352,24 @@ def main():
         check("LaTeX citation keys resolve", not cited-keys, {"missing": sorted(cited-keys)})
         check("LaTeX figure files exist", all((root/"report/figures"/name).exists() for name in figs))
         todos = [i for i, line in enumerate(tex.splitlines(), 1) if "\\todo{" in line and not line.startswith("\\newcommand")]
-        check("Draft still contains TODOs and is not the final report", not todos, {"lines": todos}, warning=True)
+        final_source = root/"report/final/main.tex"
+        if final_source.exists():
+            final_tex = final_source.read_text(encoding="utf-8")
+            check("Final source has no TODO placeholders", "\\todo" not in final_tex)
+            final_bib = (root/"report/final/references.bib").read_text(encoding="utf-8")
+            final_keys = set(re.findall(r"@\w+\s*\{\s*([^,]+)", final_bib))
+            final_cites = {k.strip() for g in re.findall(r"\\cite\{([^}]+)\}", final_tex) for k in g.split(",")}
+            check("Final citation keys resolve", not final_cites-final_keys)
+            artifact_checks = read_json(root/"results/submission_audit/final_artifacts.json")
+            for doc in artifact_checks["documents"]:
+                lo, hi = doc["page_requirement"]
+                check("Compiled artifact integrity: "+doc["path"], (root/doc["path"]).exists()
+                      and digest(root/doc["path"]) == doc["sha256"] and lo <= doc["pages"] <= hi,
+                      {"pages": doc["pages"], "page_requirement": [lo, hi]})
+            report["summary"]["final_artifacts"] = artifact_checks
+            check("Original draft placeholders retained as history", True, {"draft_TODO_lines": todos, "final_source": "report/final/main.tex"})
+        else:
+            check("Draft still contains TODOs and is not the final report", not todos, {"lines": todos}, warning=True)
         with np.load(root/"results/step3/setup_test.npz", allow_pickle=False) as z:
             i = z["explain_id"].tolist().index("test_0005")
             actual = z["y_explain_true"]

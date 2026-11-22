@@ -100,6 +100,8 @@ The 512 model coalitions include nine inputs; ADS's 64 coalitions use six geomet
 
 ## Provenance and package verification
 
+The final report and reflection are separate LaTeX projects in `report/final/` and `report/ai_use_reflection/`. Their compiled PDFs are included. To compile their `main.tex` files with Tectonic, run `tectonic main.tex` inside each project directory; BibTeX/reference passes are handled automatically. The checked compiler is Tectonic 0.17.0. First use may download its TeX bundle, so compile one project first if the format cache has not yet been initialized. The original draft source/PDF remain in the parent `report/` directory.
+
 `data/filter_supplement_v2/artifact_hashes.json` covers the dataset release. `results/step3/freeze.json` records 30 historical hashes and the test protocol. Four current files differ from that snapshot as documented in plan section 12; the audit lists them. This gate is not an independently time-stamped public registration, and the unmodified historical source versions are not reconstructed in this release.
 
 Build and verify release ZIPs with:

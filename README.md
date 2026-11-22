@@ -6,7 +6,7 @@ This project tests whether explanations of a microstrip band-pass filter surroga
 
 PR-Net is the primary model because its pole/residue representation supports concept checks. M1 is a more accurate frequency-conditioned MLP comparison; M0 adapts the network layout reported by Suslova et al.; B1 is PCA plus Gaussian-process regression. M0 differs from the paper in data, feature count and outputs. Published paper numbers are contextual comparisons, not a controlled benchmark.
 
-Experiments and saved results are available. Repository documentation and a reproducibility audit were prepared on **November 22, 2026**. The existing draft PDF/TeX and reflection notes are retained for context; they are not completed final report/reflection deliverables.
+Experiments and saved results are available. Final materials were prepared on **November 22, 2026**: an [8-page final report](report/final/DSCI498_FinalReport.pdf), a [2-page AI-use reflection](report/ai_use_reflection/DSCI498_AI_Use_Reflection.pdf), and a [requirement-by-requirement checklist](docs/submission_checklist.md). Original draft files and preparation notes are retained as history.
 
 ## Verified findings
 
@@ -27,14 +27,16 @@ Rows are three-seed means. Curve MAE uses all **216 test designs**. Centre frequ
 
 ## Code and evidence archives
 
+Download the paired archives and final PDFs from the [submission release](https://github.com/gux225-spec/DSCI498_Project-for-xAI/releases/tag/submission-2026-11-22). The code repository keeps source and lightweight records; the release carries binary reproduction evidence.
+
 | Archive | Contents |
 |---|---|
-| `DSCI498_code.zip` | Source, experiment scripts, documentation, requirements, baseline netlist, draft report and figures |
+| `DSCI498_code.zip` | Source, experiment scripts, documentation, requirements, baseline netlist, draft/final reports, AI-use reflection and figures |
 | `DSCI498_evidence.zip` | Complete dataset release, checkpoints, saved predictions/attributions, ADS response caches, tuning records and full-wave responses |
 
 Extract **both ZIPs into the same parent directory**, merging their `DSCI498_Project/` folders. The code ZIP can be inspected alone; computation requires evidence assets. Every file in the original dataset hash manifest is retained. Python caches, solver working directories and intermediate openEMS `sim/` outputs are excluded; `response.npz`, summaries and experiment records remain. Native ADS workspaces outside this project and installed commercial/native solvers are not included.
 
-Each archive contains a file-size/SHA256 manifest under `manifests/`. The separate `submission_package_index.json` lists archive contents/exclusions, and `SHA256SUMS.txt` provides archive checksums. Verify an archive with the standard library:
+Each archive contains a file-size/SHA256 manifest under `manifests/`. The separate `submission_package_index.json` lists archive contents/exclusions, and `SHA256SUMS.txt` provides archive checksums. The third-party full-text working paper is excluded; its bibliography and citations remain. Verify an archive with the standard library:
 
 ```powershell
 python scripts/build_submission.py --verify ../DSCI498_evidence.zip
@@ -106,7 +108,7 @@ docs/decision_log.md           Decisions, evidence and timing qualifications
 docs/reproducibility.md        Experiment commands and output locations
 docs/stakeholder_interview*    Original and follow-up summaries
 docs/ai_use_reflection_notes.md Confirmed AI-use facts and reflection material
-report/                       Existing draft, bibliography and figures
+report/                       Original draft, final report and AI-use reflection projects
 ```
 
 ## Recompute and rerun
@@ -125,11 +127,11 @@ The package destination must be outside the project.
 
 ## Interpretation and retained historical records
 
-Four important caveats are recorded in the audit:
+Three historical numerical/provenance caveats are recorded in the audit:
 
 1. **Historical hashes:** four of 30 freeze hashes differ: the evolving plan/protocol and two scripts adapted for test paths. Plan section 12 documents changes and a validation rerun. Original prior versions are not reconstructed. All nine frozen neural weights match.
 2. **Bandwidth definitions:** model metrics use peak-relative -3 dB; old full-wave summaries use absolute -3 dB. Tuned openEMS relative BW reductions are about **80–87 MHz**, while absolute reductions are **124–142 MHz**. These are different quantities; hard-mask verdicts are unchanged.
 3. **Violation error:** the old approximately 0.062 dB median compares surrogate smooth violation with ADS hard violation. It is not a same-target prediction error. The single-case smooth error for `test_0005` is approximately 0.0749 dB; its LIME/IG quality values are in the audit.
-4. **Report status:** draft TODOs and the PDF/TeX version mismatch remain. The final report and 1–2 page reflection are separate deliverables.
+The original draft's TODOs and PDF/TeX mismatch are retained as historical files. The separate final source has no TODO placeholders; its compiled report is 8 pages and the AI-use reflection is 2 pages. Their hashes/page checks are recorded in `results/submission_audit/final_artifacts.json`.
 
 The dataset's own README/status files describe its original pretraining state. The plan's original RQ3 means tuning; the report's Q3 means full-wave robustness. Use stage names to avoid confusing these labels. Baseline mesh sensitivity does not establish convergence of every tuned geometry; missing two-port power does not uniquely isolate radiation.

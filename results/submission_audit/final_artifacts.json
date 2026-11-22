@@ -1,0 +1,31 @@
+{
+  "prepared_date": "2026-11-22",
+  "repository": "https://github.com/gux225-spec/DSCI498_Project-for-xAI",
+  "documents": [
+    {
+      "path": "report/final/DSCI498_FinalReport.pdf",
+      "pages": 8,
+      "page_requirement": [
+        6,
+        8
+      ],
+      "sha256": "49699d2f5bf31680053285e70de9c8c2c122dca4a45301c03a5dd93479f8f017",
+      "visual_review": "All pages inspected at 100 dpi; no clipping or table overflow observed",
+      "words_extracted": 5799
+    },
+    {
+      "path": "report/ai_use_reflection/DSCI498_AI_Use_Reflection.pdf",
+      "pages": 2,
+      "page_requirement": [
+        1,
+        2
+      ],
+      "sha256": "3c5d0c17e3004f6ad5eb16d9ff2d128fe93ff56fec929ae40dc5a45b3f44aa8f",
+      "visual_review": "All pages inspected at 100 dpi; no clipping or table overflow observed",
+      "words_extracted": 665
+    }
+  ],
+  "final_source_TODOs": 0,
+  "missing_citation_keys": [],
+  "original_draft_preserved": true
+}

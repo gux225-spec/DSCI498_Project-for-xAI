@@ -37,6 +37,8 @@ def inventory(root):
         parts = rel.parts
         if any(p in {".git", "__pycache__", ".pytest_cache", ".venv", "work"} for p in parts):
             excluded.append({"path": rel.as_posix(), "reason": "environment or generated working file"})
+        elif rel.as_posix() == "docs/reference/shap_lime_filter_paper.txt":
+            excluded.append({"path": rel.as_posix(), "reason": "third-party full-text working reference; bibliography and citations retained"})
         elif parts[0] == "results" and "sim" in parts:
             excluded.append({"path": rel.as_posix(), "reason": "openEMS intermediate port/time-series output; response.npz and summary.json retained"})
         elif parts[0] in EVIDENCE_DIRS:
@@ -93,7 +95,7 @@ def build(root, output):
                "audit_status": audit["status"], "parts": [], "excluded_files": excluded,
                "external_prerequisites": ["ADS 2026 and a suitable license for new circuit simulations",
                    "openEMS/CSXCAD for new full-wave simulations", "Original native ADS workspaces outside this project are not included"],
-               "report_status": "Existing draft PDF, TeX and reflection notes are preserved as context; they are not completed final report/reflection deliverables."}
+               "report_status": "Compiled final report and AI-use reflection are included when present; original draft and preparation notes are retained as history."}
     for part in ["code", "evidence"]:
         archive_path = output/f"DSCI498_{part}.zip"
         print(f"Building {part}: {len(selected[part])} files", flush=True)

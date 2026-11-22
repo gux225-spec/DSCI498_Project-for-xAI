@@ -1,6 +1,6 @@
 # Archived result verification
 
-Recorded UTC: 2026-11-22T16:50:18.225802+00:00
+Recorded UTC: 2026-11-22T17:17:56.356895+00:00
 
 Status: **verified_with_documented_caveats**
 
@@ -38,7 +38,6 @@ Calls follow the original per-method accounting, including shared cached traject
 
 - **WARNING — Historical freeze is not an immutable current snapshot**: Four historical hash differences are documented in plan section 12; original prior versions are not reconstructed.
 - **WARNING — Bandwidth conventions require separate labels**: Historical model metrics use peak-relative -3 dB; full-wave summaries use absolute -3 dB. Both are retained and recomputed here; the hard-mask verdict is unaffected.
-- **WARNING — Draft still contains TODOs and is not the final report**: {'lines': [34, 285, 295, 400]}
 - **WARNING — Historical violation-error statistic mixes smooth and hard targets**: step4b_report.py compares surrogate smooth violation with ADS hard violation. Its 0.062 dB median is not a same-target prediction error; the case card also uses a population median for one design.
 
 ## Full-wave bandwidth definitions
@@ -167,7 +166,11 @@ The following were outside this verification run:
 | Bandwidth conventions require separate labels | warning |
 | LaTeX citation keys resolve | pass |
 | LaTeX figure files exist | pass |
-| Draft still contains TODOs and is not the final report | warning |
+| Final source has no TODO placeholders | pass |
+| Final citation keys resolve | pass |
+| Compiled artifact integrity: report/final/DSCI498_FinalReport.pdf | pass |
+| Compiled artifact integrity: report/ai_use_reflection/DSCI498_AI_Use_Reflection.pdf | pass |
+| Original draft placeholders retained as history | pass |
 | Historical violation-error statistic mixes smooth and hard targets | warning |
 | Conclusion and generalization limits | pass |
 | PRNet current-weight sample inference | pass |

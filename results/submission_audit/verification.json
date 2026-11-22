@@ -1,5 +1,5 @@
 {
-  "recorded_utc": "2026-11-22T16:50:18.225802+00:00",
+  "recorded_utc": "2026-11-22T17:17:56.356895+00:00",
   "scope": "Archived-data recomputation and optional sample inference; no retraining or new simulation",
   "checks": [
     {
@@ -554,15 +554,48 @@
       "details": null
     },
     {
-      "name": "Draft still contains TODOs and is not the final report",
-      "status": "warning",
+      "name": "Final source has no TODO placeholders",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "name": "Final citation keys resolve",
+      "status": "pass",
+      "details": null
+    },
+    {
+      "name": "Compiled artifact integrity: report/final/DSCI498_FinalReport.pdf",
+      "status": "pass",
       "details": {
-        "lines": [
+        "pages": 8,
+        "page_requirement": [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "name": "Compiled artifact integrity: report/ai_use_reflection/DSCI498_AI_Use_Reflection.pdf",
+      "status": "pass",
+      "details": {
+        "pages": 2,
+        "page_requirement": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "name": "Original draft placeholders retained as history",
+      "status": "pass",
+      "details": {
+        "draft_TODO_lines": [
           34,
           285,
           295,
           400
-        ]
+        ],
+        "final_source": "report/final/main.tex"
       }
     },
     {
@@ -859,6 +892,37 @@
         "relative_BW_reduction_MHz": 86.86501001712799
       }
     ],
+    "final_artifacts": {
+      "prepared_date": "2026-11-22",
+      "repository": "https://github.com/gux225-spec/DSCI498_Project-for-xAI",
+      "documents": [
+        {
+          "path": "report/final/DSCI498_FinalReport.pdf",
+          "pages": 8,
+          "page_requirement": [
+            6,
+            8
+          ],
+          "sha256": "49699d2f5bf31680053285e70de9c8c2c122dca4a45301c03a5dd93479f8f017",
+          "visual_review": "All pages inspected at 100 dpi; no clipping or table overflow observed",
+          "words_extracted": 5799
+        },
+        {
+          "path": "report/ai_use_reflection/DSCI498_AI_Use_Reflection.pdf",
+          "pages": 2,
+          "page_requirement": [
+            1,
+            2
+          ],
+          "sha256": "3c5d0c17e3004f6ad5eb16d9ff2d128fe93ff56fec929ae40dc5a45b3f44aa8f",
+          "visual_review": "All pages inspected at 100 dpi; no clipping or table overflow observed",
+          "words_extracted": 665
+        }
+      ],
+      "final_source_TODOs": 0,
+      "missing_citation_keys": [],
+      "original_draft_preserved": true
+    },
     "test_0005_mask_quality": {
       "LIME_R2_scale025_seed0": 0.8460208429314848,
       "IG_relative_residual": 0.00082149216775666,
@@ -894,8 +958,8 @@
     "lime": "0.2.0.1"
   },
   "counts": {
-    "pass": 106,
-    "warning": 4,
+    "pass": 111,
+    "warning": 3,
     "fail": 0
   },
   "status": "verified_with_documented_caveats",
